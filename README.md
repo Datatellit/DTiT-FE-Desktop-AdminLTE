@@ -137,7 +137,7 @@ Vue.http.interceptors.push(function (request, next) {
 window.parent.vm.xxxx  //xxxx可以data，也可以是methods
 ```
 
-* 本项目包含的Demo,[在线预览](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/index.html)
+* 本项目包含的Demo,[在线预览，登录名admin，密码123456](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/index.html)
 > Login  登录页  
 > Index  首页  
 > User List  列表页  
