@@ -137,7 +137,7 @@ Vue.http.interceptors.push(function (request, next) {
 window.parent.vm.xxxx  //xxxx可以data，也可以是methods
 ```
 
-* 本项目包含的Demo,[在线预览](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/)
+* 本项目包含的Demo,[在线预览](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/index.html)
 > Login  登录页  
 > Index  首页  
 > User List  列表页  
@@ -151,7 +151,7 @@ window.parent.vm.xxxx  //xxxx可以data，也可以是methods
 
 ## 注意事项
 > 本项目是作为[dtit-cli](https://github.com/Datatellit/dtit-cli)的模板源，所以推荐使用[dtit-cli](https://github.com/Datatellit/dtit-cli)来进行模板框架生成，也可以直接进行download进行使用。  
-> 如果项目中遇到问题，您可以给我们提[Issues](https://github.com/Datatellit/DTiT-FE-Desktop-AdminLTE/issues)
+> 如果项目中遇到问题，您可以给我们提[Issues](https://github.com/Datatellit/DTiT-FE-Desktop-AdminLTE/issues)  
 > 为了保证项目的纯净，项目中并没有包含原始AdminLTE的demo，所以基本的样式组件，请按照官方的demo进行使用
 [官方demo下载](https://github.com/almasaeed2010/AdminLTE)
 
