@@ -1,0 +1,8 @@
+{
+  "name": "DTiT-FE-Desktop-AdminLTE",
+  "description": "DTiT-FE-Desktop-AdminLTE",
+  "dependencies": {
+    "critical": "^0.8.4",
+    "dtitjs": "^1.0.1"
+  }
+}

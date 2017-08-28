@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DTiT Admin | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <style type="text/css">
+        html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a{background-color:transparent}b{font-weight:700}button,input{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type=checkbox]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}@font-face{font-family:'Glyphicons Halflings';src:url(bootstrap/fonts/glyphicons-halflings-regular.eot);src:url(bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(bootstrap/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(bootstrap/fonts/glyphicons-halflings-regular.woff) format('woff'),url(bootstrap/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.glyphicon-envelope:before{content:"\2709"}.glyphicon-lock:before{content:"\e033"}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}p{margin:0 0 10px}.row{margin-right:-15px;margin-left:-15px}.col-xs-4,.col-xs-8{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-4,.col-xs-8{float:left}.col-xs-8{width:66.66666667%}.col-xs-4{width:33.33333333%}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type=checkbox]{margin:4px 0 0;line-height:normal}.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.form-control::-ms-expand{background-color:transparent;border:0}.form-group{margin-bottom:15px}.checkbox{position:relative;display:block;margin-top:10px;margin-bottom:10px}.checkbox label{min-height:20px;padding-left:20px;margin-bottom:0;font-weight:400}.checkbox input[type=checkbox]{position:absolute;margin-left:-20px}.has-feedback{position:relative}.has-feedback .form-control{padding-right:42.5px}.form-control-feedback{position:absolute;top:0;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;background-image:none;border:1px solid transparent;border-radius:4px}.btn-primary{color:#fff;background-color:#337ab7;border-color:#2e6da4}.btn-block{display:block;width:100%}.row:after,.row:before{display:table;content:" "}.row:after{clear:both}@-ms-viewport{width:device-width}body{height:100%}body{font-family:'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;overflow-x:hidden;overflow-y:auto}a{color:#3c8dbc}.form-control{border-radius:0;box-shadow:none;border-color:#d2d6de}.form-control:-ms-input-placeholder,.form-control::-moz-placeholder,.form-control::-webkit-input-placeholder{color:#bbb;opacity:1}.form-control:not(select){-webkit-appearance:none;-moz-appearance:none;appearance:none}.icheck>label{padding-left:0}.btn{border-radius:3px;-webkit-box-shadow:none;box-shadow:none;border:1px solid transparent}.btn.btn-flat{border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-width:1px}.btn-primary{background-color:#3c8dbc;border-color:#367fa9}.login-logo{font-size:35px;text-align:center;margin-bottom:25px;font-weight:300}.login-logo a{color:#444}.login-page{background:#d2d6de}.login-box{width:360px;margin:7% auto}@media (max-width:768px){.login-box{width:90%;margin-top:20px}}.login-box-body{background:#fff;padding:20px;border-top:0;color:#666}.login-box-body .form-control-feedback{color:#777}.login-box-msg{margin:0;text-align:center;padding:0 20px 20px 20px}
+    </style>
+    <script type="text/javascript" src="plugins/require/require.js"></script>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box" id="app">
+    <div class="login-logo">
+        <a href="index.html"><b>DTiT Admin</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+
+        <div class="form-group has-feedback">
+            <input type="email" class="form-control" v-model="username" placeholder="Email">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Password" v-model="password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="checkbox icheck">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-xs-4">
+                <button type="button" @click="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.social-auth-links -->
+
+        <a href="#">I forgot my password</a><br>
+        <!-- <a href="register.html" class="text-center">Register a new membership</a>-->
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<script>
+    requirejs(["lib/frame/config"], function (config) {
+        requirejs(['icheck', 'jquery', "vue", "moment"], function (iCheck, $, Vue, moment) {
+            //由于这个加载顺序不好控制，所以在内部直接加载
+            requirejs(['css!dist/css/AdminLTE.min.css']);
+            var vm = new Vue({
+                el: "#app",
+                data: function () {
+                    //从本地的localStore中先尝试获取用户信息
+                    var data = this.$d.getCookie('dtit_saveuser');
+                    //判断data是否还可用
+                    if (data && data.timestamp > moment(new Date()).subtract('days', 7).unix()) {
+                        //数据有效
+                        delete data.timestamp;
+                        return data;
+                    }
+                    return {username: "", password: "", checked: false};
+                },
+                mounted: function () {
+                    var _self = this;
+                    $(":checkbox").iCheck({
+                        checkboxClass: 'icheckbox_square-blue',
+                        radioClass: 'iradio_square-blue',
+                        increaseArea: '20%' // optional
+                    }).on("ifChanged", function () {
+                        _self.$set(_self.$data, "checked", $(this).prop("checked"));
+                    });
+                    if (this.checked) {
+                        $(":checkbox").iCheck('check');
+                    }
+                },
+                methods: {
+                    login: function () {
+                        //验证，暂不开发
+                        var layer_i = this.$layer.load();
+                        //进行密码验证接口提交
+                        if (this.username == "admin" && this.password == "123456") {
+                            //登录成功，记录信息，并转向index页面
+                            this.$d.setCookie("dtit_userinfo", {
+                                username: this.username,
+                                password: this.password,
+                                access_token: "test-token",
+                                logo: "https://cn.vuejs.org/images/logo.png",
+                                updatedAt: "2017-07-01 00:00:00"
+                            });
+                            //判断是否需要保存用户密码
+                            if (this.checked) {
+                                //重新保存
+                                var data = JSON.parse(JSON.stringify(this.$data));
+                                data["timestamp"] = Date.parse(new Date()) / 1000;
+                                this.$d.setCookie("dtit_saveuser", data);
+                            } else {
+                                this.$d.clearCookie("dtit_saveuser");
+                            }
+                            //跳转到首页
+                            location.href = 'index.html';
+                        } else {
+                            this.$layer.tip("用户名或密码错误！");
+                        }
+                        this.$layer.close(layer_i);
+                    }
+                },
+                watch: {
+                    "checked": function (checked) {
+                        $(":checkbox").iCheck(checked ? 'check' : 'uncheck');
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

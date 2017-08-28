@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DTiT | User Management</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="../../plugins/require/require.js" data-main="../../lib/user/main-user.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Main content -->
+    <section class="content" id="app">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                    </div>
+                    <div class="col">
+                        <form class="form-inline text-right pr10">
+                            <div class="form-group">
+                                <label class="sr-only" for="username">Login Name</label>
+                                <input type="text" v-model="where.username" class="form-control" id="username"
+                                       placeholder="Login Name">
+                            </div>
+                            <div class="form-group text-left">
+                                <select2 :options="groups" my-id="groupId" @change="change" v-model="where.usergroupId"
+                                         style="width: 170px" must="false">
+                                </select2>
+                            </div>
+                            <div class="form-group">
+                                <datepicker my-id="updatedAt" v-model="where.updatedAt"
+                                            placeholder="updatedAt" @change="change"></datepicker>
+                                <!-- /.input group -->
+                            </div>
+                            <button type="button" @click="queryData(1)" class="btn btn-success">Search</button>
+                            <button type="button" @click="add" class="btn btn-primary">Add</button>
+                        </form>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="tb-user" class="table table-bordered table-hover text-center">
+                            <thead>
+                            <tr>
+                                <th v-for="c in columns" v-text="c"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(user,index) in users">
+                                <td v-text="index + 1"></td>
+                                <td>
+                                    <img :src="user.image" style="width: 25px;border-radius: 50%">
+                                </td>
+                                <td><input v-model="user.username" class="form-control" v-if="user.edit=='1'">
+                                    <template v-else><span v-text="user.username"></span></template>
+                                </td>
+                                <td>
+                                    <div class="form-inline" v-if="user.edit">
+                                        <input type="text" style="width: 100px" v-model="user.firstname"
+                                               class="form-control">
+                                        <input type="text" style="width: 100px" v-model="user.lastname"
+                                               class="form-control">
+                                    </div>
+                                    <template v-else><span v-text="user.firstname + ' ' + user.lastname"></span></template>
+                                </td>
+                                <td><input type="email" v-model="user.email" class="form-control" v-if="user.edit">
+                                    <template v-else>
+                                        <span v-text="user.email"></span>
+                                    </template>
+                                </td>
+                                <td>
+                                    <select2 :options="groups" v-if="user.edit" must="true" :my-id="'groupId_'+index"
+                                             @change="change"
+                                             v-model="user.usergroupId" style="width: 150px">
+                                    </select2>
+                                    <span v-show="user.edit!=1" v-text="user.usergroup? user.usergroup.usergroupname : 'No Select'">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span v-cloak>{{user.updatedAt | formatDate}}</span>
+                                </td>
+                                <td class="width-250">
+                                    <i class="fa fa-reply" v-show="user.edit" role="button"
+                                       @click="revert(user)" data-toggle="tooltip"
+                                       data-original-title="Revert the edit">&nbsp;</i>
+                                    <i v-if="user.edit" class="fa fa-save" role="button" data-toggle="tooltip"
+                                       data-original-title="Save the edit"
+                                       @click="save(user)"></i>
+                                    <i v-else class="fa fa-edit" role="button" @click="edit(user)" data-toggle="tooltip"
+                                       data-original-title="Edit the user"></i>&nbsp;
+                                    <i class="fa fa-remove" role="button" @click="remove(index,user.id)"
+                                       data-toggle="tooltip"
+                                       data-original-title="Remove the user"></i>&nbsp;
+                                    <div class="btn-group" style="vertical-align: top">
+                                        <span class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                            <i class="fa fa-th"></i>
+                                            <span class="caret"></span>
+                                        </span>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" @click="gotoDevice(user.id)"> <i class="fa">View controller</i></a></li>
+                                            <li><a href="#" @click="resetPassword(user.id)"> <i class="fa">Reset password</i></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="text-center" v-if="users.length < 1">
+                                <td :colspan="columns.length">No matching record</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <paging :index="page.currentPage" :total="page.total" :number="page.countPerPage"
+                            @change="pageChange"></paging>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- ./wrapper -->
+</body>
+</html>

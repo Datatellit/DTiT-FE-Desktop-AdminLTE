@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DTiT Admin | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="plugins/require/require.js"></script>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box" id="app">
+    <div class="login-logo">
+        <a href="index.html"><b>DTiT Admin</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+
+        <div class="form-group has-feedback">
+            <input type="email" class="form-control" v-model="username" placeholder="Email">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Password" v-model="password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="checkbox icheck">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-xs-4">
+                <button type="button" @click="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.social-auth-links -->
+
+        <a href="#">I forgot my password</a><br>
+        <!-- <a href="register.html" class="text-center">Register a new membership</a>-->
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<script>
+    requirejs(["lib/frame/config"], function (config) {
+        requirejs(['icheck', 'jquery', "vue", "moment"], function (iCheck, $, Vue, moment) {
+            //由于这个加载顺序不好控制，所以在内部直接加载
+            requirejs(['css!dist/css/AdminLTE.min.css']);
+            var vm = new Vue({
+                el: "#app",
+                data: function () {
+                    //从本地的localStore中先尝试获取用户信息
+                    var data = this.$d.getCookie('dtit_saveuser');
+                    //判断data是否还可用
+                    if (data && data.timestamp > moment(new Date()).subtract('days', 7).unix()) {
+                        //数据有效
+                        delete data.timestamp;
+                        return data;
+                    }
+                    return {username: "", password: "", checked: false};
+                },
+                mounted: function () {
+                    var _self = this;
+                    $(":checkbox").iCheck({
+                        checkboxClass: 'icheckbox_square-blue',
+                        radioClass: 'iradio_square-blue',
+                        increaseArea: '20%' // optional
+                    }).on("ifChanged", function () {
+                        _self.$set(_self.$data, "checked", $(this).prop("checked"));
+                    });
+                    if (this.checked) {
+                        $(":checkbox").iCheck('check');
+                    }
+                },
+                methods: {
+                    login: function () {
+                        //验证，暂不开发
+                        var layer_i = this.$layer.load();
+                        //进行密码验证接口提交
+                        if (this.username == "admin" && this.password == "123456") {
+                            //登录成功，记录信息，并转向index页面
+                            this.$d.setCookie("dtit_userinfo", {
+                                username: this.username,
+                                password: this.password,
+                                access_token: "test-token",
+                                logo: "https://cn.vuejs.org/images/logo.png",
+                                updatedAt: "2017-07-01 00:00:00"
+                            });
+                            //判断是否需要保存用户密码
+                            if (this.checked) {
+                                //重新保存
+                                var data = JSON.parse(JSON.stringify(this.$data));
+                                data["timestamp"] = Date.parse(new Date()) / 1000;
+                                this.$d.setCookie("dtit_saveuser", data);
+                            } else {
+                                this.$d.clearCookie("dtit_saveuser");
+                            }
+                            //跳转到首页
+                            location.href = 'index.html';
+                        } else {
+                            this.$layer.tip("用户名或密码错误！");
+                        }
+                        this.$layer.close(layer_i);
+                    }
+                },
+                watch: {
+                    "checked": function (checked) {
+                        $(":checkbox").iCheck(checked ? 'check' : 'uncheck');
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

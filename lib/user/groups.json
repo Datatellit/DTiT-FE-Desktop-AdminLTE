@@ -1,0 +1,51 @@
+{
+  "code": 1,
+  "msg": "success",
+  "data": {
+    "count": 6,
+    "rows": [
+      {
+        "id": 3,
+        "usergroupname": "酱油组",
+        "prefix": null,
+        "createdAt": "2017-03-01T02:12:55.000Z",
+        "updatedAt": "2017-03-14T02:18:11.000Z"
+      },
+      {
+        "id": 4,
+        "usergroupname": "前端组",
+        "prefix": null,
+        "createdAt": "2017-03-14T02:18:06.000Z",
+        "updatedAt": "2017-03-14T02:18:09.000Z"
+      },
+      {
+        "id": 5,
+        "usergroupname": "硬件组",
+        "prefix": "gasz/",
+        "createdAt": "2017-03-14T02:18:06.000Z",
+        "updatedAt": "2017-03-14T02:18:06.000Z"
+      },
+      {
+        "id": 1,
+        "usergroupname": "产品组",
+        "prefix": null,
+        "createdAt": "2017-03-01T02:12:55.000Z",
+        "updatedAt": "2017-03-01T02:12:55.000Z"
+      },
+      {
+        "id": 2,
+        "usergroupname": "测试组",
+        "prefix": null,
+        "createdAt": "2017-03-01T02:12:55.000Z",
+        "updatedAt": "2017-03-01T02:12:55.000Z"
+      },
+      {
+        "id": 6,
+        "usergroupname": "开发组",
+        "prefix": "szsy/",
+        "createdAt": null,
+        "updatedAt": null
+      }
+    ]
+  }
+}

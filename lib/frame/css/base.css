@@ -1,0 +1,11 @@
+.content {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    top: 90px;
+    left: 229px;
+}
+
+.content div {
+    height: 100%;
+}

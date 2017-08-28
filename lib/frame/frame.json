@@ -1,0 +1,30 @@
+{
+  "static": "",
+  "user": {
+    "image": "dist/img/user2-160x160.jpg",
+    "username": "Admin",
+    "updatedAt": "1970-01-01 00:00:00"
+  },
+  "frame": {
+    "name": "User List",
+    "desc": "User List",
+    "href": "pages/user/user.html",
+    "isLoad": false,
+    "navigate": "User Management > User List"
+  },
+  "menu": [
+    {
+      "name": "User Management",
+      "icon": "fa fa-user",
+      "desc": "User Management",
+      "child": [
+        {
+          "name": "User List",
+          "icon": "fa fa-circle-o",
+          "desc": "User List",
+          "href": "pages/user/user.html"
+        }
+      ]
+    }
+  ]
+}

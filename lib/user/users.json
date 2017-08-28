@@ -1,0 +1,240 @@
+{
+  "code": 1,
+  "msg": "success",
+  "data": {
+    "count": 11,
+    "rows": [
+      {
+        "id": 98,
+        "username": "test1",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 99,
+        "username": "test2",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 100,
+        "username": "test3",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 101,
+        "username": "test4",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 102,
+        "username": "test5",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 103,
+        "username": "test6",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 104,
+        "username": "test",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 105,
+        "username": "test",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 106,
+        "username": "test",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 107,
+        "username": "test",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      },
+      {
+        "id": 108,
+        "username": "test",
+        "password": "123456",
+        "firstname": "test",
+        "lastname": "test",
+        "sex": 1,
+        "nickname": "waroomtest",
+        "email": "test@dtit.com",
+        "image": "https://cn.vuejs.org/images/logo.png",
+        "createdAt": "2017-08-23T06:29:58.000Z",
+        "updatedAt": "2017-08-23T06:29:58.000Z",
+        "usergroupId": 6,
+        "usergroup": {
+          "id": 6,
+          "usergroupname": "开发组",
+          "prefix": "szsy/",
+          "createdAt": null,
+          "updatedAt": null
+        }
+      }
+    ]
+  }
+}
