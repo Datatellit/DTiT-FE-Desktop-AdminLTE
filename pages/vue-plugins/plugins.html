@@ -1,10 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Vue-Plugins</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DTiT | User Management</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="../../plugins/require/require.js"
+            data-main="../../lib/vue-plugins/main-plugins.js"></script>
 </head>
-<body>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Main content -->
+    <section class="content" id="app">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary" :style="bgColor">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Quick Example</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <form role="form">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="dateTimePicker">DateTimePicker</label>
+                                <datepicker id="dateTimePicker" @change="change" v-model="dateTimePicker"
+                                            date-format="yyyy-mm-dd hh:ii:ss"></datepicker>
+                                <br>
+                                <button class="btn btn-default" type="button" @click="setCurTime">设为当前时间</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="datePicker">DatePicker</label>
+                                <datepicker id="datePicker" @change="change" v-model="datePicker"
+                                            date-format="yyyy-mm-dd"></datepicker>
+                            </div>
+                            <div class="form-group">
+                                <label for="timePicker">TimePicker</label>
+                                <datepicker id="timePicker" @change="change" v-model="timePicker"
+                                            date-format="hh:ii:ss"></datepicker>
+                            </div>
+                            <div class="form-group">
+                                <label for="color">Color Hex</label>
+                                <colorpicker my-id="color" :value="color" @change="change"></colorpicker>
+                            </div>
+                            <div class="form-group">
+                                <label for="color1">Color Rgb</label>
+                                <colorpicker my-id="color1" :options="colorOptions" :value="color"
+                                             @change="change"></colorpicker>
+                            </div>
+                            <div class="form-group">
+                                <label>Select2 必选</label>
+                                <select2 :options="selects" v-model="select"></select2>
+                            </div>
+                            <div class="form-group">
+                                <label>Select2 非必选</label>
+                                <select2 :options="selects" v-model="select" must="false" text="拉拉啦啦啦啦啦"></select2>
+                            </div>
+                            <div class="form-group">
+                                <label>Select2 多选</label>
+                                <select2 :options="selects" v-model="select" @change="change" multiple="true"
+                                         must="false"></select2>
+                            </div>
+                            <div class="form-group">
+                                <label>Slider 横向 红色</label>
+                                <slider v-model="slider" min="0" max="500" step="5" orientation="horizontal"
+                                        color="red"></slider>
+                            </div>
+                            <div class="form-group">
+                                <label>Slider 纵向 绿色</label>
+                                <slider v-model="slider" :options="sliderOpts"></slider>
+                            </div>
+                            <div class="form-group">
+                                <label>上传 uploaded上传完成回调</label>
+                                <uploader text="Select image" @uploaded="uploaded"></uploader>
+                            </div>
+                            <div class="form-group">
+                                <label>排序分页参照<a href="#" @click="gotoUser">此页面</a></label>
+                                <uploader text="Select image" @uploaded="uploaded"></uploader>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
 
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 </html>

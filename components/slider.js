@@ -5,15 +5,17 @@ define(['jquery', 'vue'], function ($, Vue) {
     var init = function () {
         Vue.component('slider', {
             template: ' <input type="text" class="slider form-control">',
-            props: ['options', 'value', 'myId', 'color'],
+            props: ['options', 'value', 'myId', 'color', 'min', 'max', 'step', 'orientation'],
             mounted: function () {
                 var vm = this;
                 var $slider = $(this.$el);
+                if (this.options && this.options.color)
+                    this.options.id = this.options.color;
                 var opt = $.extend({
-                    min: 0,
-                    max: 100,
-                    step: 1,
-                    orientation: "horizontal",
+                    min: this.min || 0,
+                    max: this.max || 100,
+                    step: this.step || 1,
+                    orientation: this.orientation || "horizontal",
                     value: this.value || 0,
                     selection: "before",
                     id: this.color || ""

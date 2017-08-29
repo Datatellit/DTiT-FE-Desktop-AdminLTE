@@ -18,7 +18,7 @@ define(['jquery', 'vue'], function ($, Vue) {
                     format: "hex"
                 }, this.options || {});
                 $colorpicker.colorpicker(opt).on('changeColor', function (ev) {
-                    vm.$emit('change', $colorpicker.data('colorpicker').color.toRGB(), vm.myId);
+                    vm.$emit('change', $colorpicker.data('colorpicker').color, vm.myId);
                 });
                 $colorpicker.colorpicker('setValue', this.value);
             },
