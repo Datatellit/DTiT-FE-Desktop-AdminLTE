@@ -22,12 +22,11 @@
  \---components     <Vue封装后的组件目录>
     \---colorpicker.js     <颜色选择器>
     \---datepicker.js      <日期时间选择控件>
-    \---icheck.js      <复选框>
     \---order.js       <表格排序控件>
     \---paging.js      <表格分页控件>
     \---select2.js     <下拉选择框>
     \---slider.js      <滑块控件>
-    \---uploader.js    <上传控件>
+    \---uploader.js    <上传控件，配置服务端地址在此文件中>
  \config
     \---config.js   <配置文件>
  +---dist   <AdminLTE生成的资源引用目录>  
@@ -137,7 +136,7 @@ Vue.http.interceptors.push(function (request, next) {
 window.parent.vm.xxxx  //xxxx可以data，也可以是methods
 ```
 
-* 本项目包含的Demo,[在线预览](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/index.html)
+* 本项目包含的Demo,[在线预览，登录名admin，密码123456](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/index.html)
 > Login  登录页  
 > Index  首页  
 > User List  列表页  
@@ -153,7 +152,8 @@ window.parent.vm.xxxx  //xxxx可以data，也可以是methods
 > 本项目是作为[dtit-cli](https://github.com/Datatellit/dtit-cli)的模板源，所以推荐使用[dtit-cli](https://github.com/Datatellit/dtit-cli)来进行模板框架生成，也可以直接进行download进行使用。  
 > 如果项目中遇到问题，您可以给我们提[Issues](https://github.com/Datatellit/DTiT-FE-Desktop-AdminLTE/issues)  
 > 为了保证项目的纯净，项目中并没有包含原始AdminLTE的demo，所以基本的样式组件，请按照官方的demo进行使用
-[官方demo下载](https://github.com/almasaeed2010/AdminLTE)
+[官方demo下载](https://github.com/almasaeed2010/AdminLTE)  
+> 当前components目录下的组件，并没有通用化，使用者应按照需求进行相应的调整
 
 ## 浏览器支持
 AdminLTE supports the following browsers:
@@ -172,7 +172,7 @@ AdminLTE supports the following browsers:
 > 因为WebStorm默认浏览路径，是包含项目名称的（生产环境不可能出现），所以请使用Web Server挂载，并配置WebStorm的Deployment配置，参见下图  
 ![WebStorm配置](https://github.com/Datatellit/DTiT-FE-Desktop-AdminLTE/blob/master/dist/img/webstorm.png)
 * 我要添加一个新的模块应该怎么做
-> 在lib目录下添加模块目录，并建立xxx-main.js模块路由文件，用于对模块下不同页面进行资源分配，在pages目录下新建同样的模块，并引用require，将xxx-main设置为配置文件，然后继续在lib下面建立各页面的脚本，进行Vue数据初始化，具体参考项目内的user模块
+> 在lib目录下添加模块目录，并建立main-xxx.js模块路由文件，用于对模块下不同页面进行资源分配，在pages目录下新建同样的模块，并引用require，将main-xxx设置为配置文件，然后继续在lib下面建立各页面的脚本，进行Vue数据初始化，具体参考项目内的user模块
 * 数据获取应该怎么写
 > 数据获取使用的是Vue官方的包vue-resource(现在官方已不推荐，推荐使用的是axios)，具体的使用细则，参见[Vue-Resource](https://github.com/pagekit/vue-resource)
 * 为什么数据改变了，但是页面没有正确显示

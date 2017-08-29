@@ -25,6 +25,19 @@
           "href": "pages/user/user.html"
         }
       ]
+    },
+    {
+      "name": "Vue Plugins",
+      "icon": "fa fa-user",
+      "desc": "Vue Plugins",
+      "child": [
+        {
+          "name": "Plugin List",
+          "icon": "fa fa-circle-o",
+          "desc": "Plugins List",
+          "href": "pages/vue-plugins/plugins.html"
+        }
+      ]
     }
   ]
 }
