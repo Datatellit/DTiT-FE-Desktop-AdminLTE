@@ -146,7 +146,7 @@ window.parent.vm.xxxx  //xxxx可以data，也可以是methods
 
 
 ## 页面流程 
-![页面流程](https://github.com/Datatellit/DTiT-FE-Desktop-AdminLTE/blob/master/dist/img/life.png)
+![页面流程](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/dist/img/life.png)
 
 ## 注意事项
 > 本项目是作为[dtit-cli](https://github.com/Datatellit/dtit-cli)的模板源，所以推荐使用[dtit-cli](https://github.com/Datatellit/dtit-cli)来进行模板框架生成，也可以直接进行download进行使用。  
@@ -170,7 +170,7 @@ AdminLTE supports the following browsers:
 > 因为使用了require进行模块加载，存在路径问题，所以不要以文件的方式来访问，要用Web Server挂载
 * 为什么在WebStorm中直接浏览也不行
 > 因为WebStorm默认浏览路径，是包含项目名称的（生产环境不可能出现），所以请使用Web Server挂载，并配置WebStorm的Deployment配置，参见下图  
-![WebStorm配置](https://github.com/Datatellit/DTiT-FE-Desktop-AdminLTE/blob/master/dist/img/webstorm.png)
+![WebStorm配置](https://datatellit.github.io/DTiT-FE-Desktop-AdminLTE/dist/img/webstorm.png)
 * 我要添加一个新的模块应该怎么做
 > 在lib目录下添加模块目录，并建立main-xxx.js模块路由文件，用于对模块下不同页面进行资源分配，在pages目录下新建同样的模块，并引用require，将main-xxx设置为配置文件，然后继续在lib下面建立各页面的脚本，进行Vue数据初始化，具体参考项目内的user模块
 * 数据获取应该怎么写
